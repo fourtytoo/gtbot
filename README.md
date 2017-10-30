@@ -15,23 +15,28 @@ Add the dependency to your project file:
 If gtbot project is _not_ listed on Clojars you'll have to download it
 and install it yourself.  Here is how.
 
-Clone the library from GitHub:
+Clone the library from GitHub
 ``` sh
 cd somewhere/outside/your/project
 git clone git@github.com:fourtytoo/gtbot.git
-```	
+```
+
+install it
+``` sh
+cd gtbot
+lein install
+```
 
 Add the dependency to your project.  Check how to do it on the
 leiningen [page](https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md#checkout-dependencies). 
 But that basically boils down to creating a checkouts directory in the
 root of your project
-
 ``` sh
 cd your/project/root/directory
 mkdir checkouts
 ```
 
-and inside it, creating a symbolic link to gtbot's root directory
+... and inside it, creating a symbolic link to gtbot's root directory
 ``` sh
 cd checkouts
 ln -s somewhere/outside/your/project/gtbot .
