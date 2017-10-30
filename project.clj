@@ -1,4 +1,4 @@
-(defproject gtbot "0.1.0-SNAPSHOT"
+(defproject fourtytoo/gtbot "0.1.0-SNAPSHOT"
   :description "Translate like a bot"
   :url "http://github.com/fourtytoo/gtbot"
   :license {:name "Eclipse Public License"
