@@ -8,48 +8,55 @@ interface.
 
 Add the dependency to your project file:
 
-    [fourtytoo/gtbot "0.1.0-SNAPSHOT"]
+``` clojure
+[fourtytoo/gtbot "0.1.0-SNAPSHOT"]
+```
 
 If gtbot project is _not_ listed on Clojars it means you'll have to
 download it and install it yourself.  Here is how.
 
 Clone the library from GitHub:
+``` sh
+cd somewhere/outside/your/project
+git clone git@github.com:fourtytoo/gtbot.git
+```	
 
-	cd somewhere/outside/your/project
-	git clone git@github.com:fourtytoo/gtbot.git
-	
 Add the dependency to your project.  Check how to do it on the
 leiningen [page](https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md#checkout-dependencies). 
 But that basically boils down to creating a checkouts directory in the
 root of your project
 
-	cd your/project/root/directory
-	mkdir checkouts
+``` sh
+cd your/project/root/directory
+mkdir checkouts
+```
 
-and inside it, creating a symbolic link to gtbot's
-root directory
-
-	cd checkouts
-	ln -s somewhere/outside/your/project/gtbot .
+and inside it, creating a symbolic link to gtbot's root directory
+``` sh
+cd checkouts
+ln -s somewhere/outside/your/project/gtbot .
+```
 
 Gtbot uses [http-kit](https://github.com/http-kit/http-kit ) to make
 HTTP requests and [data.json](https://github.com/clojure/data.json )
 to decode JSON.  If you are already using your own version of these
 libraries you may want to exclude gtbot's own:
 
-	[fourtytoo/gtbot "0.1.0-SNAPSHOT" :exclusions [http-kit org.clojure/data.json]]
+``` clojure
+[fourtytoo/gtbot "0.1.0-SNAPSHOT" :exclusions [http-kit org.clojure/data.json]]
+```
 
 Add gtbot.core to your namespace:
 
 ``` clojure
-    (require [gtbot.core :refer [translate]])
+(require [gtbot.core :refer [translate]])
 ```
 
 Translate:
 
 ``` clojure
-    (translate "de" "en" "Kartoffel")
-	;; {:detailed [["noun" ["potato"] [["potato" ["Kartoffel" "Knolle"] nil 0.69811249]] "Kartoffel" 1]], :detailed-definition nil, :suggestion nil, :phonetic "", :translation "potato", :text-phonetic ""}
+(translate "de" "en" "Kartoffel")
+=> {:detailed [["noun" ["potato"] [["potato" ["Kartoffel" "Knolle"] nil 0.69811249]] "Kartoffel" 1]], :detailed-definition nil, :suggestion nil, :phonetic "", :translation "potato", :text-phonetic ""}
 ```
 
 
@@ -87,10 +94,9 @@ those IP address who exploit their page with a bot.
 The code in this library has been derived from
 [google-translate.el](https://github.com/atykhonov/google-translate).
 I don't think that was the first library of this kind, nor the last
-one.  It just was written in Emacs Lisp, which is to me less
-irritating than JavaScript.  Not much effort has been put into
-understanding the algorithm employed, beyond what could be obviously
-simplified.
+one, it just was written in Emacs Lisp, which is to me less irritating
+than JavaScript.  Not much effort has been put into understanding the
+algorithm employed, beyond what could be obviously simplified.
 
 If you really are interested in this aspect I must warn you that the
 original code (google-translate.el) has little documentation and
@@ -100,7 +106,7 @@ obfuscated JavaScript.
 
 ## License
 
-Copyright © 2017 Walter C. Pelissero <walter@pelissero.de>
+Copyright © 2017 Walter C. Pelissero
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
