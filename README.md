@@ -4,7 +4,7 @@ A Clojure library to translate text through the Google Translate web
 interface.
 
 
-## Usage
+## Installation
 
 Add the dependency to your project file:
 
@@ -12,8 +12,8 @@ Add the dependency to your project file:
 [fourtytoo/gtbot "0.1.0-SNAPSHOT"]
 ```
 
-If gtbot project is _not_ listed on Clojars it means you'll have to
-download it and install it yourself.  Here is how.
+If gtbot project is _not_ listed on Clojars you'll have to download it
+and install it yourself.  Here is how.
 
 Clone the library from GitHub:
 ``` sh
@@ -45,6 +45,8 @@ libraries you may want to exclude gtbot's own:
 ``` clojure
 [fourtytoo/gtbot "0.1.0-SNAPSHOT" :exclusions [http-kit org.clojure/data.json]]
 ```
+
+## Usage
 
 Add gtbot.core to your namespace:
 
