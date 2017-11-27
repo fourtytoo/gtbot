@@ -93,7 +93,7 @@ The libraries, such as this one, who rely on the reverse engineering
 of the Google web page, may find themselves not working any more if
 Google decides to change its page.  This is for free, but it won't
 work for anything but interactive use; google is likely to blacklist
-those IP address who exploit their page with a bot.
+those IP addresses who exploit their page with a bot.
 
 
 ## Origin
@@ -107,8 +107,8 @@ algorithm employed, beyond what could be obviously simplified.
 
 If you really are interested in this aspect I must warn you that the
 original code (google-translate.el) has little documentation and
-itself is based on the reverse engineering of Google code, which is
-obfuscated JavaScript.
+itself may be based on the reverse engineering of Google code, which
+is obfuscated JavaScript.
 
 
 ## License
